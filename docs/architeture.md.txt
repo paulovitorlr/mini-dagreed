@@ -40,21 +40,29 @@ Auth protegendo os outros -> Cada usuario ter seu token para ficar protegido.
 
 ### Course Service
 - Responsabiliade: Crud para manejar os cursos
-
+- Banco: Cousers.db para alocar os cursos.
 ----__Progress Service
 - Responsabilidade: marcar o progresso do usuario dentro dos cursos.
-- Banco: Cousers.db para alocar os cursos.
+-- Banco: Progress.db
+
+### Recomendation Service
+-- Responsabilidade: pegar cursos que o usuario tenha visto e fazer recomendações com base nisso.
+-- Banco: recommendation.db 
 
 ## Comunicação entre serviços
---Comunication Service
-- Responsabilidades: Conseguir detectar quando algum serviço soltar uma informação e conseguir guardar a mensagem e enviar de forma certa.
+--Responsabilidade: Criar e consulmir eventos, sem ficar chamando sempre a função, pois se ela ficar fora do Ar a comunicação nao será feita mas o progresso estará salvo.
 
+### User service
+- Responsabilidade: gerenciar perfil e histórico de aprendizado do usuário
+- Banco: user.db
 
 ## Por que bancos separados?
 Escabilidade e manuntenção
 
 ## Como o JWT protege os serviços?
-Gatantindo a autenticação e autorização.
+O token JWT é assinado pelo Auth Service com uma chave secreta.
+Cada serviço valida o token localmente usando essa chave,
+sem precisar chamar o Auth Service a cada requisição.
 
 ## Evolução futura
 - RabbitMQ para eventos reais

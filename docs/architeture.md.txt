@@ -1,0 +1,62 @@
+Auth -> Conceder acesso Seguro a APIs e dados de terceiros.
+
+	Tudo começa com Auenticação: saber que aquele user realmente é ele, e a Autorização: o que ele pode fazer no 	Sistema.
+	Transformar a senha do user com hashe (faz com o que a senha vire uma string fixa e nunca pode ser 	revertida.
+	Ultilização de Salt, pois isso Evita que senhas identicas tenha o mesmo hashe, e assim sempre que o user 	logar, terá essa verificação com Salt.
+	
+	Como manter o user logado sem precisar ficar validando todas as vezes?
+	Sessões e Cookies:
+	Sempre que você envia seus dados com um browser, o servidor cria um id de sessão que ele deixa armazenado
+	num cookie, para que: sempre que o usuario voltar ele valide automaticamente.
+	!! Sempre lembrar de proteger o cookie !!!
+	
+	Onde guardar a informação? A melhor opção é o Redis, ja que é mais rapido que um db e facil acesso.
+	As informações podem mudar de servidor e pode ocorrer dele nao reconhecer o usuario, para evitar isso
+	existe o JWT
+	
+	Jason Web Token
+	Ele é dividido em 3 partes, o Header, Payload e Signature
+	Header diz qual foi o Sistema de assinatua foi usado.
+	Payload carrega os dados, como o Ip de usuario, não é bom guardar infomrações sensiveis Nessa parte.
+	Signature, que garante que ninguem forjou o conteudo (ver sobre HMAC e RSA/ECDSA)
+
+	Entao, usar JWT pois cada microserviço valida o token sozinho utilizando a chave publica.
+	
+	
+Db -> Cada serviço guarda seus dados, podendo se comunicar com outros.
+      Para evitar aclopamento, partindo para o lado de escabilidade, ja que fica mais viavel a manuntenção de codigo
+
+Comunicação -> Cada micro serviço se comunica atraves de API.
+
+Auth protegendo os outros -> Cada usuario ter seu token para ficar protegido.
+
+
+# Architecture Decisions
+
+## Serviços
+### Auth Service
+- Responsabilidade: Autenticação e autorização de user e Apis
+- Banco: auth.db para armazenar as credenciais importantes(redis na hora do funcionamento)
+
+### Course Service
+- Responsabiliade: Crud para manejar os cursos
+
+----__Progress Service
+- Responsabilidade: marcar o progresso do usuario dentro dos cursos.
+- Banco: Cousers.db para alocar os cursos.
+
+## Comunicação entre serviços
+--Comunication Service
+- Responsabilidades: Conseguir detectar quando algum serviço soltar uma informação e conseguir guardar a mensagem e enviar de forma certa.
+
+
+## Por que bancos separados?
+Escabilidade e manuntenção
+
+## Como o JWT protege os serviços?
+Gatantindo a autenticação e autorização.
+
+## Evolução futura
+- RabbitMQ para eventos reais
+...
+

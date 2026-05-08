@@ -159,3 +159,4 @@ E:\github\Mini-degreed\services\auth-service\obj\Debug\net10.0\refint\auth-servi
 E:\github\Mini-degreed\services\auth-service\obj\Debug\net10.0\auth-service.pdb
 E:\github\Mini-degreed\services\auth-service\obj\Debug\net10.0\auth-service.genruntimeconfig.cache
 E:\github\Mini-degreed\services\auth-service\obj\Debug\net10.0\ref\auth-service.dll
+E:\github\Mini-degreed\services\auth-service\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

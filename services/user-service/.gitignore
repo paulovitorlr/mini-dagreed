@@ -1,0 +1,6 @@
+appsettings.json
+*.db
+bin/
+obj/
+**/appsettings.json
+**/appsettings.Development.json

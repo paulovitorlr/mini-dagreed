@@ -33,6 +33,20 @@ public class AuthService : IAuthService
 
         await _repository.AddAsync(user);
         await _repository.SaveChangesAsync();
+
+        try
+        {
+            using var httpClient = new HttpClient();
+            await httpClient.PostAsJsonAsync("https://localhost:7165/users/internal/create", new
+            {
+                AuthId = user.Id,
+                Email = user.Email
+            });
+        }
+        catch
+        {
+            // User Service indisponível, perfil será criado depois
+        }
         return true;
     }
     public async Task<string?> LoginAsync(LoginDTO dto)

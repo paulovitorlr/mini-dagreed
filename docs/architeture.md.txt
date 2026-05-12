@@ -68,3 +68,7 @@ sem precisar chamar o Auth Service a cada requisição.
 - RabbitMQ para eventos reais
 ...
 
+## Decisões de trade-off
+- Comunicação entre Auth e User Service: chamada HTTP direta por enquanto
+- Evolução: substituir por evento via RabbitMQ
+

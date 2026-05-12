@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "user_service.Controllers.UserController",
+    "Method": "Create",
+    "RelativePath": "users/internal/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "user_service.DTOs.CreateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "user_service.Controllers.UserController",
+    "Method": "GetMe",
+    "RelativePath": "users/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "user_service.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "users/me",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "user_service.DTOs.UpdateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

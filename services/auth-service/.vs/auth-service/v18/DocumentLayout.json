@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
               "ToolTip": "E:\\github\\Mini-degreed\\services\\auth-service\\Services\\AuthService.cs",
               "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwDAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAswDAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T17:27:25.213Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T16:27:34.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T16:27:34.056Z"
             }
           ]
         }

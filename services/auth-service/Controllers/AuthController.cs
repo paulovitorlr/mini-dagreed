@@ -6,9 +6,11 @@ namespace auth_service.Controllers;
 
 [ApiController]
 [Route("auth")]
-public class AuthController :ControllerBase
+public class AuthController : ControllerBase
 {
-  private readonly IAuthService _service;
+    //Este controller depende de um serviço que implemente IAuthService.
+    //O ASP.NET Core vai fornecer essa implementação automaticamente via Injeção de Dependência.
+    private readonly IAuthService _service;
 
     public AuthController(IAuthService service)
     {

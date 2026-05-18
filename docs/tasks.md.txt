@@ -1,0 +1,74 @@
+# Tasks — Mini Degreed
+
+## Sprint 1 — Planejamento e arquitetura
+| ID | Tarefa | Tipo | Pontos | Status |
+|----|--------|------|--------|--------|
+| T01 | Definir serviços e responsabilidades | docs | 2 | ✅ Done |
+| T02 | Documentar decisões de arquitetura | docs | 3 | ✅ Done |
+| T03 | Definir comunicação entre serviços | docs | 2 | ✅ Done |
+| T04 | Configurar repositório e estrutura de pastas | chore | 1 | ✅ Done |
+
+## Sprint 2 — Auth Service
+| ID | Tarefa | Tipo | Pontos | Status |
+|----|--------|------|--------|--------|
+| T05 | Criar projeto .NET e instalar dependências | chore | 1 | ✅ Done |
+| T06 | Implementar model User e DbContext | feat | 2 | ✅ Done |
+| T07 | Implementar AuthRepository | feat | 3 | ✅ Done |
+| T08 | Implementar hash de senha com BCrypt | feat | 3 | ✅ Done |
+| T09 | Implementar geração e validação de JWT | feat | 5 | ✅ Done |
+| T10 | Criar endpoints register, login e validate | feat | 3 | ✅ Done |
+| T11 | Testar endpoints no Postman | test | 2 | ✅ Done |
+
+## Sprint 3 — Course Service
+| ID | Tarefa | Tipo | Pontos | Status |
+|----|--------|------|--------|--------|
+| T12 | Criar projeto .NET e instalar dependências | chore | 1 | ✅ Done |
+| T13 | Implementar model Course e DbContext | feat | 2 | ✅ Done |
+| T14 | Implementar CourseRepository | feat | 3 | ✅ Done |
+| T15 | Criar DTOs de entrada e saída | feat | 2 | ✅ Done |
+| T16 | Implementar CourseService com mapeamento | feat | 5 | ✅ Done |
+| T17 | Criar endpoints CRUD protegidos por JWT | feat | 3 | ✅ Done |
+| T18 | Testar endpoints no Postman | test | 2 | ✅ Done |
+
+## Sprint 4 — User Service
+| ID | Tarefa | Tipo | Pontos | Status |
+|----|--------|------|--------|--------|
+| T19 | Criar projeto .NET e instalar dependências | chore | 1 | ✅ Done |
+| T20 | Implementar model User com AuthId | feat | 2 | ✅ Done |
+| T21 | Implementar UserRepository | feat | 3 | ✅ Done |
+| T22 | Criar DTOs Create, Update e User | feat | 2 | ✅ Done |
+| T23 | Implementar UserService com mapeamento | feat | 5 | ✅ Done |
+| T24 | Criar endpoints me, update e internal/create | feat | 3 | ✅ Done |
+| T25 | Integrar Auth Service com User Service | feat | 5 | ✅ Done |
+| T26 | Testar endpoints no Postman | test | 2 | ✅ Done |
+
+## Sprint 5 — Progress Service
+| ID | Tarefa | Tipo | Pontos | Status |
+|----|--------|------|--------|--------|
+| T27 | Criar projeto .NET e instalar dependências | chore | 1 | ✅ Done |
+| T28 | Implementar model Progress e DbContext | feat | 2 | ✅ Done |
+| T29 | Implementar ProgressRepository | feat | 3 | ✅ Done |
+| T30 | Criar DTOs Enroll, CompleteLesson e Progress | feat | 2 | ✅ Done |
+| T31 | Implementar cálculo de progresso percentual | feat | 5 | ✅ Done |
+| T32 | Criar endpoints enroll, complete-lesson e my-progress | feat | 3 | ✅ Done |
+| T33 | Testar endpoints no Postman | test | 2 | ✅ Done |
+
+## Sprint 6 — Recommendation Service
+| ID | Tarefa | Tipo | Pontos | Status |
+|----|--------|------|--------|--------|
+| T34 | Criar projeto .NET e instalar dependências | chore | 1 | ✅ Done |
+| T35 | Criar DTOs externos para Course e Progress | feat | 2 | ✅ Done |
+| T36 | Implementar lógica de recomendação por categoria | feat | 8 | ✅ Done |
+| T37 | Configurar HttpClient para chamadas externas | feat | 3 | ✅ Done |
+| T38 | Criar endpoint de recomendações | feat | 3 | ✅ Done |
+| T39 | Testar recomendações com múltiplos cursos | test | 3 | ✅ Done |
+
+## Sprint 8 — Documentação e Docker
+| ID | Tarefa | Tipo | Pontos | Status |
+|----|--------|------|--------|--------|
+| T45 | Finalizar architecture.md | docs | 2 | ✅ Done |
+| T46 | Criar tasks.md com estimativas | docs | 2 | ✅ Done |
+| T47 | Escrever README principal do projeto | docs | 3 | 🔄 In Progress |
+| T48 | Criar Dockerfile para cada serviço | chore | 5 | ⏳ Pending |
+| T49 | Criar docker-compose.yml | chore | 8 | ⏳ Pending |
+| T50 | Configurar GitHub Actions para CI/CD | chore | 8 | ⏳ Pending |

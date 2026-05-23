@@ -1,0 +1,32 @@
+<div class="container">
+  <header>
+    <h1>Mini Degreed</h1>
+    <nav>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/recommendations">Recomendações</a>
+    </nav>
+  </header>
+
+  <h2>Cursos disponíveis</h2>
+
+  <div class="message" *ngIf="message">{{ message }}</div>
+
+  <div class="courses-grid">
+    <div class="course-card" *ngFor="let course of courses">
+      <img [src]="course.imageUrl" [alt]="course.title" onerror="this.src='https://placehold.co/300x160'"/>
+      <div class="course-info">
+        <span class="category">{{ course.category }}</span>
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.description }}</p>
+        <div class="course-footer">
+          <span class="price">R$ {{ course.price }}</span>
+          <button
+            (click)="enroll(course.id)"
+            [disabled]="isEnrolled(course.id)">
+            {{ isEnrolled(course.id) ? 'Matriculado' : 'Matricular' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

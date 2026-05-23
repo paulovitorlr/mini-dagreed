@@ -1,5 +1,6 @@
 ﻿using auth_service.DTOs;
 using auth_service.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace auth_service.Controllers;
@@ -18,6 +19,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
+    [AllowAnonymous]
     public async Task<IActionResult> Register([FromBody] RegisterDTO dto)
     {
         var result = await _service.RegisterAsync(dto);
@@ -27,6 +29,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("login")]
+    [AllowAnonymous]
     public async Task<IActionResult> Login([FromBody] LoginDTO dto)
     {
         var token = await _service.LoginAsync(dto);

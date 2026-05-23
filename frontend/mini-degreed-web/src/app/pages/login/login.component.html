@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card">
+    <h1>Mini Degreed</h1>
+    <h2>Entrar</h2>
+
+    <div class="error" *ngIf="error">{{ error }}</div>
+
+    <input type="email" placeholder="Email" [(ngModel)]="email" />
+    <input type="password" placeholder="Senha" [(ngModel)]="password" />
+    <button (click)="login()">Entrar</button>
+
+    <p>Não tem conta? <a routerLink="/register">Cadastre-se</a></p>
+  </div>
+</div>

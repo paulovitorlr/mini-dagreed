@@ -18,13 +18,14 @@ public class CourseController : ControllerBase
         _service = service;
     }
 
-    [HttpGet("{id}")]
+    
 
     public async Task<IActionResult> GetAll()
     {
         var courses = await _service.GetAllAsync();
         return Ok(courses);
     }
+    [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
         var course = await _service.GetByIdAsync(id);

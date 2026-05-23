@@ -6,13 +6,13 @@ using recommendation_service.Services;
 namespace recommendation_service.Controllers;
 
 [ApiController]
-[Route("recommendation")]
+[Route("recommendations")]
 [Authorize]
 public class RecommendationController : ControllerBase
 {
-    private readonly RecommendationService _service;
+    private readonly IRecommendationService _service;
 
-    public RecommendationController(RecommendationService service)
+    public RecommendationController(IRecommendationService service)
     {
         _service = service;
     }

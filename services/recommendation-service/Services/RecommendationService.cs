@@ -7,8 +7,8 @@ namespace recommendation_service.Services;
 public class RecommendationService : IRecommendationService
 {
     private readonly HttpClient _httpClient;
-    private const string ProgressServiceUrl = "https://localhost:7166";
-    private const string CourseServiceUrl = "https://localhost:7164";
+    private const string ProgressServiceUrl = "http://localhost:5005";
+    private const string CourseServiceUrl = "http://localhost:5002";
 
     public RecommendationService(HttpClient httpClient)
     {

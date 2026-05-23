@@ -1,0 +1,27 @@
+<div class="container">
+  <header>
+    <h1>Mini Degreed</h1>
+    <nav>
+      <a routerLink="/courses">Cursos</a>
+      <a routerLink="/recommendations">Recomendações</a>
+      <button (click)="logout()">Sair</button>
+    </nav>
+  </header>
+
+  <h2>Meu Progresso</h2>
+
+  <div *ngIf="progresses.length === 0" class="empty">
+    Você ainda não está matriculado em nenhum curso.
+    <a routerLink="/courses">Ver cursos disponíveis</a>
+  </div>
+
+  <div class="progress-list">
+    <div class="progress-card" *ngFor="let p of progresses">
+      <h3>Curso #{{ p.courseId }}</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="p.progressPercentage"></div>
+      </div>
+      <span>{{ p.completedLessons }}/{{ p.totalLessons }} aulas — {{ p.progressPercentage }}%</span>
+    </div>
+  </div>
+</div>

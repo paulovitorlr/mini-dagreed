@@ -1,0 +1,31 @@
+<div class="container">
+  <header>
+    <h1>Mini Degreed</h1>
+    <nav>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/courses">Cursos</a>
+    </nav>
+  </header>
+
+  <h2>Recomendações para você</h2>
+
+  <div *ngIf="loading" class="empty">Carregando...</div>
+
+  <div *ngIf="!loading && recommendations.length === 0" class="empty">
+    Nenhuma recomendação disponível. <a routerLink="/courses">Matricule-se em mais cursos!</a>
+  </div>
+
+  <div class="courses-grid">
+    <div class="course-card" *ngFor="let r of recommendations">
+      <div class="course-info">
+        <span class="category">{{ r.category }}</span>
+        <h3>{{ r.title }}</h3>
+        <p>{{ r.description }}</p>
+        <div class="course-footer">
+          <span class="price">R$ {{ r.price }}</span>
+          <button (click)="enroll(r.courseId)">Matricular</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

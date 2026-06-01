@@ -5,31 +5,34 @@ O projeto é dividido em serviços independentes — cada um com sua responsabil
 
 ## Arquitetura
 
-O sistema é composto por 5 microsserviços independentes que se comunicam via REST APIs e JWT.
+O sistema é composto por 5 microsserviços independentes que se comunicam via REST APIs, JWT e mensageria assíncrona com RabbitMQ.
 
 Client
-└── Auth Service     → emite e valida tokens JWT
-├── Course Service     → catálogo de cursos (protegido por JWT)
-├── User Service       → perfil do usuário (integrado com Auth)
-├── Progress Service   → matrícula e progresso por aulas
+└── Auth Service           → emite e valida tokens JWT
+├── Course Service         → catálogo de cursos (protegido por JWT)
+├── User Service           → perfil do usuário (evento via RabbitMQ)
+├── Progress Service       → matrícula e progresso por aulas
 └── Recommendation Service → sugestões baseadas em categorias
 
 ## Serviços
 
 | Serviço | Porta | Responsabilidade | Banco |
 |---------|-------|-----------------|-------|
-| Auth Service | 7163 | Registro, login e validação JWT | auth.db |
-| Course Service | 7164 | CRUD de cursos | course.db |
-| User Service | 7165 | Perfil e histórico do usuário | user.db |
-| Progress Service | 7166 | Matrícula e progresso por aulas | progress.db |
-| Recommendation Service | 7167 | Sugestões por categoria | — |
+| Auth Service | 5003 | Registro, login e validação JWT | auth.db |
+| Course Service | 5002 | CRUD de cursos | course.db |
+| User Service | 5004 | Perfil e histórico do usuário | user.db |
+| Progress Service | 5005 | Matrícula e progresso por aulas | progress.db |
+| Recommendation Service | 5006 | Sugestões por categoria | — |
 
 ## Tecnologias
 
 - **.NET 10** — framework principal
+- **Angular 18** — frontend SPA
 - **Entity Framework Core** — ORM com SQLite
 - **JWT (Bearer)** — autenticação stateless entre serviços
 - **BCrypt** — hash de senha com salt
+- **RabbitMQ** — mensageria assíncrona entre serviços
+- **Docker** — containerização dos serviços
 - **xUnit + Moq** — testes unitários com mocks
 - **Clean Architecture** — Controller → Service → Repository
 
@@ -37,7 +40,14 @@ Client
 
 ### Pré-requisitos
 - .NET 10 SDK
-- Visual Studio 2022 ou VS Code
+- Node.js 20+
+- Angular CLI 18
+- Docker Desktop
+
+### Subindo o RabbitMQ
+```bash
+docker start rabbitmq
+```
 
 ### Rodando os serviços
 
@@ -56,6 +66,14 @@ cd services/progress-service && dotnet run
 cd services/recommendation-service && dotnet run
 ```
 
+### Rodando o frontend
+```bash
+cd frontend/mini-degreed-web
+ng serve
+```
+
+Acessa: http://localhost:4200
+
 ### Rodando os testes
 ```bash
 cd services/auth-service.Tests
@@ -64,13 +82,19 @@ dotnet test
 
 ## Fluxo principal
 
-POST /auth/register       → cria conta
-POST /auth/login          → retorna JWT
-POST /courses             → cria curso (requer JWT)
-POST /progress/enroll     → matricula no curso
+POST /auth/register            → cria conta + publica evento RabbitMQ
+POST /auth/login               → retorna JWT
+POST /courses                  → cria curso (requer JWT)
+POST /progress/enroll          → matricula no curso
 POST /progress/complete-lesson → conclui aula
 GET  /progress/my-progress     → vê progresso %
-GET  /recommendations          → recebe sugestões
+GET  /recommendations          → recebe sugestões por categoria
+
+## Mensageria (RabbitMQ)
+
+| Evento | Producer | Consumer | Ação |
+|--------|----------|----------|------|
+| user.created | Auth Service | User Service | Cria perfil do usuário |
 
 ## Decisões técnicas
 
@@ -85,16 +109,20 @@ Evita acoplamento entre serviços. Cada um evolui seu schema sem impactar os out
 Cada serviço valida o token localmente usando a chave secreta compartilhada,
 sem precisar consultar o Auth Service a cada requisição.
 
+**Por que RabbitMQ?**
+Garante que eventos entre serviços não se percam mesmo que um serviço esteja fora do ar.
+A mensagem fica na fila até o serviço consumidor estar disponível.
+
 **Trade-offs conhecidos**
-- Comunicação Auth → User Service via HTTP direto (evolução: RabbitMQ)
 - Sem API Gateway centralizado (evolução: YARP ou Ocelot)
-- Docker ainda não configurado (próximo passo)
+- Docker com problema de espaço em disco no ambiente de desenvolvimento
+- Testes unitários implementados apenas no Auth Service
 
 ## Próximos passos
 
-- [ ] Docker + docker-compose para orquestração local
-- [ ] API Gateway com YARP
-- [ ] RabbitMQ para comunicação assíncrona entre serviços
+- [x] Docker + docker-compose para orquestração local
+- [x] RabbitMQ para comunicação assíncrona entre serviços
+- [x] Frontend em Angular
+- [ ] API Gateway com YARP ou Ocelot
 - [ ] Testes unitários para Course, Progress e Recommendation Services
-- [ ] Frontend em Angular
 - [ ] CI/CD com GitHub Actions

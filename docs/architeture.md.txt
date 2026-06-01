@@ -64,11 +64,15 @@ O token JWT é assinado pelo Auth Service com uma chave secreta.
 Cada serviço valida o token localmente usando essa chave,
 sem precisar chamar o Auth Service a cada requisição.
 
-## Evolução futura
-- RabbitMQ para eventos reais
-...
+## Mensageria (RabbitMQ)
+- Comunicação entre Auth e User Service.
 
-## Decisões de trade-off
-- Comunicação entre Auth e User Service: chamada HTTP direta por enquanto
-- Evolução: substituir por evento via RabbitMQ
+### Eventos implementados
+- `user.created` → Auth Service publica → User Service consome e cria o perfil
+
+### Evolução futura
+- `lesson.completed` → Progress publica → Recommendation atualiza sugestões
+- `course.enrolled` → Progress publica → Notification Service avisa por email
+
+
 

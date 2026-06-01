@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\github\\Mini-degreed\\services\\progress-service\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EA7F0A59-FC3C-FEBA-159C-AD301130CA2F}|progress-service.csproj|e:\\github\\mini-degreed\\services\\progress-service\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{EA7F0A59-FC3C-FEBA-159C-AD301130CA2F}|progress-service.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EA7F0A59-FC3C-FEBA-159C-AD301130CA2F}|progress-service.csproj|e:\\github\\mini-degreed\\services\\progress-service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EA7F0A59-FC3C-FEBA-159C-AD301130CA2F}|progress-service.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "dockerfile",
+              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\progress-service\\dockerfile",
+              "RelativeDocumentMoniker": "dockerfile",
+              "ToolTip": "E:\\github\\Mini-degreed\\services\\progress-service\\dockerfile",
+              "RelativeToolTip": "dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-01T12:11:14.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\progress-service\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -30,12 +47,11 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAYwAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-23T15:20:18.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T15:20:18.72Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\progress-service\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

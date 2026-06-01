@@ -1,0 +1,13 @@
+# Copie este arquivo para docker-compose.yml e preencha os valores
+# cp docker-compose.example.yml docker-compose.yml
+
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    
+    
+  auth-service:
+    environment:
+      - JwtSettings__Secret=SEU_SECRET_AQUI_MINIMO_32_CARACTERES

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using auth_service.Data;
+using auth_service.Messaging;
 using System.Runtime.InteropServices;
 using auth_service.Repositories;
 using auth_service.Services;
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=auth.db"));
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped <RabbitMqPublisher>();
 
 builder.Services.AddCors(options =>
 {

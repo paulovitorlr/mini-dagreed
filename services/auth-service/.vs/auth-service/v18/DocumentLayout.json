@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\github\\Mini-degreed\\services\\auth-service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|e:\\github\\mini-degreed\\services\\auth-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|e:\\github\\mini-degreed\\services\\auth-service\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|e:\\github\\mini-degreed\\services\\auth-service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|e:\\github\\mini-degreed\\services\\auth-service\\messaging\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|solutionrelative:messaging\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|e:\\github\\mini-degreed\\services\\auth-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CDCC4BD-C90A-CBE1-99E9-56198F46A4B0}|auth-service.csproj|e:\\github\\mini-degreed\\services\\auth-service\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,41 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\auth-service\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "E:\\github\\Mini-degreed\\services\\auth-service\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-23T15:17:13.742Z",
+              "Title": "UserCreatedEvent.cs",
+              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\auth-service\\Messaging\\UserCreatedEvent.cs",
+              "RelativeDocumentMoniker": "Messaging\\UserCreatedEvent.cs",
+              "ToolTip": "E:\\github\\Mini-degreed\\services\\auth-service\\Messaging\\UserCreatedEvent.cs",
+              "RelativeToolTip": "Messaging\\UserCreatedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T16:30:27.147Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\auth-service\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\github\\Mini-degreed\\services\\auth-service\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAkwCAAAAAKAAAAAAAAAA==",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\auth-service\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "E:\\github\\Mini-degreed\\services\\auth-service\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T14:56:54.136Z",
+              "WhenOpened": "2026-05-27T19:20:36.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\auth-service\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\github\\Mini-degreed\\services\\auth-service\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T14:56:54.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\auth-service\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "E:\\github\\Mini-degreed\\services\\auth-service\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAiwC0AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T17:03:21.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-16T17:03:21.262Z"
             }
           ]
         }

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\github\\Mini-degreed\\services\\user-service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|e:\\github\\mini-degreed\\services\\user-service\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|e:\\github\\mini-degreed\\services\\user-service\\messaging\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|solutionrelative:messaging\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|e:\\github\\mini-degreed\\services\\user-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|e:\\github\\mini-degreed\\services\\user-service\\messaging\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17FE68F7-A790-66A0-25A5-14B086A4E4DD}|user-service.csproj|solutionrelative:messaging\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +22,32 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserCreatedEvent.cs",
+              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\user-service\\Messaging\\UserCreatedEvent.cs",
+              "RelativeDocumentMoniker": "Messaging\\UserCreatedEvent.cs",
+              "ToolTip": "E:\\github\\Mini-degreed\\services\\user-service\\Messaging\\UserCreatedEvent.cs",
+              "RelativeToolTip": "Messaging\\UserCreatedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T11:44:05.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\user-service\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "E:\\github\\Mini-degreed\\services\\user-service\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAYwAgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-23T15:21:28.475Z",
+              "Title": "RabbitMqConsumer.cs",
+              "DocumentMoniker": "E:\\github\\Mini-degreed\\services\\user-service\\Messaging\\RabbitMqConsumer.cs",
+              "RelativeDocumentMoniker": "Messaging\\RabbitMqConsumer.cs",
+              "ToolTip": "E:\\github\\Mini-degreed\\services\\user-service\\Messaging\\RabbitMqConsumer.cs",
+              "RelativeToolTip": "Messaging\\RabbitMqConsumer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAIAwwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T16:55:53.12Z",
               "EditorCaption": ""
             },
             {
@@ -41,7 +58,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\github\\Mini-degreed\\services\\user-service\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAiwC4AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACEAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T14:55:12.249Z",
               "EditorCaption": ""

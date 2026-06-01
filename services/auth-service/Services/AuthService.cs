@@ -1,4 +1,5 @@
 ﻿using auth_service.DTOs;
+using auth_service.Messaging;
 using auth_service.Models;
 using auth_service.Repositories;
 using BCrypt.Net;
@@ -13,11 +14,13 @@ public class AuthService : IAuthService
 {
     private readonly IAuthRepository _repository;
     private readonly string __jwtSecret;
+    private readonly RabbitMqPublisher _publisher;
 
-    public AuthService(IAuthRepository repository, IConfiguration configuration)
+    public AuthService(IAuthRepository repository, IConfiguration configuration, RabbitMqPublisher publisher)
     {
         _repository = repository;
         __jwtSecret = configuration["JwtSettings:Secret"]!;
+        _publisher = publisher;
     }
 
     public async Task<bool> RegisterAsync(RegisterDTO dto)
@@ -34,19 +37,13 @@ public class AuthService : IAuthService
         await _repository.AddAsync(user);
         await _repository.SaveChangesAsync();
 
-        try
+        //publica evento no RabbitMQ
+        await _publisher.PublishAsync("user.created", new UserCreatedEvent
         {
-            using var httpClient = new HttpClient();
-            await httpClient.PostAsJsonAsync("https://localhost:7165/users/internal/create", new
-            {
-                AuthId = user.Id,
-                Email = user.Email
-            });
-        }
-        catch
-        {
-            // User Service indisponível, perfil será criado depois
-        }
+            AuthId = user.Id,
+            Email = user.Email
+        });
+
         return true;
     }
     public async Task<string?> LoginAsync(LoginDTO dto)

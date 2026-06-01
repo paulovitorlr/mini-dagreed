@@ -5,6 +5,7 @@ using System.Text;
 using user_service.Data;
 using user_service.Repositories;
 using user_service.Services;
+using user_service.Messaging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+builder.Services.AddHostedService<RabbitMqConsumer>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", policy =>
@@ -39,6 +42,8 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
+
+
 
 
 var app = builder.Build();

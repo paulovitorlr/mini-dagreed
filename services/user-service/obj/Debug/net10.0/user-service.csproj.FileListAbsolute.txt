@@ -156,3 +156,4 @@ E:\github\Mini-degreed\services\user-service\obj\Debug\net10.0\user-service.pdb
 E:\github\Mini-degreed\services\user-service\obj\Debug\net10.0\user-service.genruntimeconfig.cache
 E:\github\Mini-degreed\services\user-service\obj\Debug\net10.0\ref\user-service.dll
 E:\github\Mini-degreed\services\user-service\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+E:\github\Mini-degreed\services\user-service\bin\Debug\net10.0\RabbitMQ.Client.dll
